@@ -1,0 +1,72 @@
+#pageWrapper{
+    background-color: #173760;
+    color: #fff;
+}
+
+.container{
+    max-width: 1000px;
+}
+
+#searchBar{
+    padding: 7rem 0;
+    height: 100vh;
+    text-align: center;
+}
+
+#searchBar .xl{
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.navbar a{
+    color: #fff;
+}
+
+.navbar-brand{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.navbar-brand span{
+    margin-left: .5rem;
+}
+.navbar-nav a{
+    text-transform: uppercase;
+
+}
+
+.input-group{
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#searchBar .tl{
+    text-align: left;
+}
+#searchBar.result p{
+    margin: 1.5rem 0;
+    /* font-weight: bold; */
+    font-size: 1.2rem;
+}
+#searchBar.result h1{
+    font-size: 3.4rem;
+}
+#searchBar.result h3{
+    font-size: 1.4rem;
+}
+
+.company-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background-color: cyan;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+#searchBar.result .price{
+    color: lightgreen;
+}

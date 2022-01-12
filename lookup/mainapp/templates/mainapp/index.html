@@ -1,0 +1,59 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+
+{% if result %}
+<div class="container">
+    <div class="row result" id="searchBar">
+        <div class="col-md-4 tl">
+            <h1>{{ result.name.capitalize }}</h1>
+            <h3>NASDAQ:{{ result.ticker.upper }}</h3>
+
+            <p>Headquarters: <br> {{ result.location.capitalize }}</p>
+            <p># of Employees: <br> {{ result.employees }}</p>
+            <p>CEO: <br> {{ result.ceo.capitalize }}</p>
+        </div>
+
+        <div class="col-md-4">
+            
+            
+            <div class="company-logo">
+                {% if result.featured_image %}
+                <img src="{{ result.featured_image }}" alt="">
+                {% endif %}
+            </div>
+
+            <p class="price">${{ result.price }}</p>
+
+        </div>
+
+        <div class="col-md-4 tl">
+            <p>Sector: <br> {{ result.sector.name.capitalize }}</p>
+            <p>Industry: <br> {{ result.industry.name.capitalize }}</p>
+            <p>Market Cap: <br> ${{ result.market_cap }}</p>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="container">
+    <div class="row" id="searchBar">
+        <div class="col-md-7 ms-auto me-auto">
+            <h1 class="xl">All your financial data in one place</h1>
+            <form action="" method="get" class="mt-4">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="search" placeholder="Enter a ticker symbol / Crypto coin" aria-label="Enter a ticker symbol / Crypto coin" aria-describedby="button-addon2">
+                    <button class="btn btn-primary" type="submit" id="button-addon2">Submit</button>
+                </div>
+
+                
+                {% if not found %}
+                    <p class="lead text-danger">Ticker searched was not found</p>
+                {% endif %}
+                    
+            </form>
+        </div>
+    </div>
+</div>
+{% endif %}
+  
+{% endblock content %}
